@@ -59,10 +59,10 @@ public class StackSurat07 {
 
     public void cariSurat(String nama) {
         boolean ditemukan = false;
-        for (Surat07 surat : surat) {
-            if (surat != null && surat.namaMahasiswa.equalsIgnoreCase(nama)) {
+        for (int i = top; i >= 0; i--) {
+            if (surat != null && surat[i].namaMahasiswa.equalsIgnoreCase(nama)) {
                 System.out.print("Surat ditemukan: \n");
-                surat.tampilkan();
+                surat[i].tampilkan();
                 ditemukan = true;
                 break;
             }
